@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nébula — Foro de comunidad</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <span class="logo">✦</span>
+    <div>
+      <b>NÉBULA</b>
+      <small>FORO DE COMUNIDAD</small>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="ghost" onclick="openAuth()">Iniciar sesión</button>
+    <button class="primary" onclick="openNewPost()">+ Nueva publicación</button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div>
+    <span class="pill">COMUNIDAD</span>
+    <h1>Un espacio para<br><em>compartir ideas.</em></h1>
+    <p>Conversaciones, fotografía y comunidad en un solo lugar.</p>
+  </div>
+  <div class="orb"></div>
+</section>
+
+<section class="toolbar">
+  <div>
+    <h2>Explorar</h2>
+    <span id="userState">Invitado</span>
+  </div>
+
+  <input id="search"
+    placeholder="Buscar publicaciones…"
+    oninput="loadPosts()">
+</section>
+
+<section id="categories" class="categories"></section>
+
+<section>
+  <div class="section-head">
+    <h2>Últimas publicaciones</h2>
+  </div>
+
+  <div id="posts" class="posts"></div>
+</section>
+
+</main>
+
+<div id="modal" class="modal hidden">
+  <div class="card">
+    <button class="close" onclick="closeModal()">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<footer>
+© 2026 Nébula · Comunidad y fotografía
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>
